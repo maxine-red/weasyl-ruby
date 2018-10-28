@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Copyright 2014-2018 Maxine Michalski <maxine@furfind.net>
+# Copyright 2018 Maxine Michalski <maxine@furfind.net>
 #
 # This file is part of Weasyl.
 #

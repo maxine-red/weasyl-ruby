@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Copyright 2014-2018 Maxine Michalski <maxine@furfind.net>
+# Copyright 2018 Maxine Michalski <maxine@furfind.net>
 #
 # This file is part of Weasyl.
 #
@@ -17,10 +17,20 @@
 # You should have received a copy of the GNU General Public License
 # along with Weasyl.  If not, see <http://www.gnu.org/licenses/>.
 
+
+require 'singleton'
 module Weasyl
   # @author Maxine Michalski
   # Helper class to abstract actual API communication
   # @since 0.1.0
   class API
+    include Singleton
+    # Sets the API key. OAuth isn't supported yet.
+    # @return [String] API key for weasyl API
+    attr_accessor :key
+    def fetch
+      raise ArgumentError, 'API key can\'t be empty' if @key.nil?
+      JSON.parse(URI.parse('https://weasyl.com/api/whoami').read('X-Weasyl-API-Key' => @key), symbolize_names: true)
+    end
   end
 end
