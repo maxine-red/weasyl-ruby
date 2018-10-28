@@ -17,7 +17,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Weasyl.  If not, see <http://www.gnu.org/licenses/>.
 
-
 require 'singleton'
 module Weasyl
   # @author Maxine Michalski
@@ -34,7 +33,7 @@ module Weasyl
       JSON.parse(URI.parse("https://weasyl.com/api/#{endpoint}")
         .read('X-Weasyl-API-Key' => @key), symbolize_names: true)
     end
-    
+
     # A test method to test API connection
     # @author Maxine Michalski
     # @return [Hash] A Hash object with user information

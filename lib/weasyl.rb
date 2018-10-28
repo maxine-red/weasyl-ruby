@@ -22,6 +22,7 @@ require 'uri'
 require 'json'
 
 require_relative 'weasyl/api'
+require_relative 'weasyl/messages'
 
 # Namespace for all classes in this gem.
 # @author Maxine Michalski
