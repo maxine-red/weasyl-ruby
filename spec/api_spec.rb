@@ -17,5 +17,22 @@
 # You should have received a copy of the GNU General Public License
 # along with Weasyl.  If not, see <http://www.gnu.org/licenses/>.
 
-describe Weasyl::API, '.new' do
+Weasyl::API.instance.key = ''
+
+describe Weasyl::API, '#whoami' do
+  it 'fetches info about the currently logged in user' do
+    uri = double(URI)
+    allow(URI).to receive(:parse).and_return(uri)
+    allow(uri).to receive(:read).and_return('{}')
+    expect(Weasyl::API.instance.whoami).to be_a Hash 
+  end
+end
+
+describe Weasyl::API, '#version' do
+  it 'returns the currently connected weasyl API version' do
+    uri = double(URI)
+    allow(URI).to receive(:parse).and_return(uri)
+    allow(uri).to receive(:read).and_return('{"short_sha": "deadbeef"}')
+    expect(Weasyl::API.instance.version).to be_a String
+  end
 end

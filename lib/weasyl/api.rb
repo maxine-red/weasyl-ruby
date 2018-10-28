@@ -26,11 +26,29 @@ module Weasyl
   class API
     include Singleton
     # Sets the API key. OAuth isn't supported yet.
+    # @notice This method is not supposed to be used directly!
     # @return [String] API key for weasyl API
     attr_accessor :key
-    def fetch
+    def fetch(endpoint)
       raise ArgumentError, 'API key can\'t be empty' if @key.nil?
-      JSON.parse(URI.parse('https://weasyl.com/api/whoami').read('X-Weasyl-API-Key' => @key), symbolize_names: true)
+      JSON.parse(URI.parse("https://weasyl.com/api/#{endpoint}")
+        .read('X-Weasyl-API-Key' => @key), symbolize_names: true)
+    end
+    
+    # A test method to test API connection
+    # @author Maxine Michalski
+    # @return [Hash] A Hash object with user information
+    # @since 0.1.0
+    def whoami
+      fetch(:whoami)
+    end
+
+    # Display version of weasyl API we connected to
+    # @author Maxine Michalski
+    # @since 0.1.0
+    # @return [String] String that shows current weasyl API version
+    def version
+      fetch(:version)[:short_sha]
     end
   end
 end
