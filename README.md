@@ -1,29 +1,36 @@
-# Weasyl: Ruby bindings for the weasyl art board
+# Weasyl Ruby: Ruby bindings for the weasyl art board
 
 
 
 [![Build Status](https://travis-ci.org/maxine-red/weasyl.svg?branch=master)](https://travis-ci.org/maxine-red/weasyl)
 
-[![Gem Version](https://img.shields.io/gem/v/weasyl.svg)](https://rubygems.org/gems/weasyl)
+[![Gem Version](https://img.shields.io/gem/v/weasyl-ruby.svg)](https://rubygems.org/gems/weasyl-ruby)
 ![GitHub Release Date](https://img.shields.io/github/release-date/maxine-red/weasyl.svg)
-[![Dependency Status](https://gemnasium.com/badges/github.com/maxine-red/weasyl.svg)](https://gemnasium.com/github.com/maxine-red/weasyl)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/37caa7ef71f207e6f961/maintainability)](https://codeclimate.com/github/maxine-red/weasyl/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/37caa7ef71f207e6f961/test_coverage)](https://codeclimate.com/github/maxine-red/weasyl/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/abec47c7ffbf84b03d4e/maintainability)](https://codeclimate.com/github/maxine-red/weasyl-ruby/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/abec47c7ffbf84b03d4e/test_coverage)](https://codeclimate.com/github/maxine-red/weasyl-ruby/test_coverage)
 [![Inline docs](http://inch-ci.org/github/maxine-red/weasyl.svg)](http://inch-ci.org/github/maxine-red/weasyl)
 
 ## Description
 
+Wesayl Ruby are Ruby bindings for [Weasyl](https://weasylcom). All of the API is
+supposed to be covered and this gem will follow changes, as soon as they are
+known to its maintainer.
+
+API keys have to be setup outside of this gem and plans on supporting OAuth with
+the Weasyl API are not planned as of this writing.
+
+This gem also follows Semantic Versioning 2.0.
 
 ## Installation
 
 As a gem:
 
-`$ sudo gem install weasyl`
+`$ sudo gem install weasyl-ruby`
 
 With bundler:
 
-Add `gem 'weasyl'` to your Gemfile and run `$ bundle install`
+Add `gem 'weasyl-ruby', '~> 1.0'` to your Gemfile and run `$ bundle install`
 
 ## Examples
 
