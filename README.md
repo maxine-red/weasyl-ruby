@@ -1,7 +1,5 @@
 # Weasyl Ruby: Ruby bindings for the weasyl art board
 
-
-
 [![Build Status](https://travis-ci.org/maxine-red/weasyl-ruby.svg?branch=master)](https://travis-ci.org/maxine-red/weasyl-ruby)
 
 [![Gem Version](https://img.shields.io/gem/v/weasyl-ruby.svg)](https://rubygems.org/gems/weasyl-ruby)
