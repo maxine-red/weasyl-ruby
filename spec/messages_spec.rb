@@ -30,6 +30,13 @@ describe Weasyl::Messages do
       expect(Weasyl::Messages.summary).to be_a Weasyl::Messages::Summary
     end
   end
+  describe '.submissions' do
+    it 'fetches a list of submissions in a user\'s inbox' do
+      allow(@uri).to receive(:read)
+        .and_return('{"backtime": null, "submissions": [], "nexttime": 1}')
+      expect(Weasyl::Messages.submissions).to be_a Hash
+    end
+  end
 end
 
 describe Weasyl::Messages::Summary, '#comments' do

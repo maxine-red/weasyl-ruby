@@ -31,6 +31,39 @@ module Weasyl
         .fetch('messages/summary'))
     end
 
+    # Fetch a list of submissions for the currently logged in user
+    # @author Maxine Michalski
+    # @since 0.1.0
+    # @param count [Integer] max amount of submissions returned (100)
+    # @param backtime [Integer] UNIX EPOCH, only submissions after this time are
+    # returned
+    # @param nexttime [Integer] UNIX EPOCH, only submissions before this time
+    # are returned
+    # @notice This method accepts a block, that goes through all available
+    # submissions. While the non-block version only returns 100 submissions at
+    # all.
+    # @return [Weasyl::SubmissionList]
+    def self.submissions(count = 100, backtime = 0, nexttime = Time.now.to_i)
+      params = { count: count, backtime: backtime, nexttime: nexttime }
+      subs = nil
+      loop do
+        subs = fetch_subs(params)
+        break if subs[:nexttime].nil? || !block_given?
+        subs[:submissions].each { |s| yield s }
+        params[:nexttime] = subs[:nexttime]
+      end
+      subs
+    end
+
+    def self.fetch_subs(params)
+      subs = Weasyl::API.instance.fetch('messages/submissions', params)
+      subs[:submissions].map! do |s|
+        Weasyl::Submission.new(s)
+      end
+      subs
+    end
+    private_class_method :fetch_subs
+
     # Class that represents a summary of message information.
     # @author Maxine Michalski
     # @since 0.1.0

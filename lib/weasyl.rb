@@ -23,6 +23,7 @@ require 'json'
 
 require_relative 'weasyl/api'
 require_relative 'weasyl/messages'
+require_relative 'weasyl/submission'
 
 # Namespace for all classes in this gem.
 # @author Maxine Michalski
@@ -31,6 +32,8 @@ module Weasyl
   MAJOR = 0
   MINOR = 1
   PATCH = 0
-  NAME = 'weasyl'
+  NAME = 'weasyl-ruby'
+  AUTHOR = '~maxinered'
   VERSION = "#{MAJOR}.#{MINOR}.#{PATCH}"
+  USER_AGENT = "#{Weasyl::NAME}/#{Weasyl::VERSION} by #{Weasyl::AUTHOR}"
 end
