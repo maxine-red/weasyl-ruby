@@ -2,14 +2,14 @@
 
 
 
-[![Build Status](https://travis-ci.org/maxine-red/weasyl.svg?branch=master)](https://travis-ci.org/maxine-red/weasyl)
+[![Build Status](https://travis-ci.org/maxine-red/weasyl-ruby.svg?branch=master)](https://travis-ci.org/maxine-red/weasyl-ruby)
 
 [![Gem Version](https://img.shields.io/gem/v/weasyl-ruby.svg)](https://rubygems.org/gems/weasyl-ruby)
-![GitHub Release Date](https://img.shields.io/github/release-date/maxine-red/weasyl.svg)
+![GitHub Release Date](https://img.shields.io/github/release-date/maxine-red/weasyl-ruby.svg)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/abec47c7ffbf84b03d4e/maintainability)](https://codeclimate.com/github/maxine-red/weasyl-ruby/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/abec47c7ffbf84b03d4e/test_coverage)](https://codeclimate.com/github/maxine-red/weasyl-ruby/test_coverage)
-[![Inline docs](http://inch-ci.org/github/maxine-red/weasyl.svg)](http://inch-ci.org/github/maxine-red/weasyl)
+[![Inline docs](http://inch-ci.org/github/maxine-red/weasyl-ruby.svg)](http://inch-ci.org/github/maxine-red/weasyl-ruby)
 
 ## Description
 
