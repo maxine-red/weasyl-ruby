@@ -13,8 +13,8 @@
 
 ## Description
 
-Wesayl Ruby are Ruby bindings for [Weasyl](https://weasylcom). All of the API is
-supposed to be covered and this gem will follow changes, as soon as they are
+Wesayl Ruby are Ruby bindings for [Weasyl](https://weasyl.com). All of the API
+is supposed to be covered and this gem will follow changes, as soon as they are
 known to its maintainer.
 
 API keys have to be setup outside of this gem and plans on supporting OAuth with
